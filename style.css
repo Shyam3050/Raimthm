@@ -162,7 +162,7 @@ body {
   height: 4rem;
   background-color: var(--vivid-red);
   color: var(--white);
-  transition: var(--transition);
+  overflow-y: hidden;
 }
 .logo {
   padding-left: 30px;
