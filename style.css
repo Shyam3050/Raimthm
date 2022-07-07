@@ -213,6 +213,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: center !important;
+  
 }
 .banner h2 {
   /* display: none; */
@@ -253,6 +254,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    transition: var(--transition);
   }
   .nav-link{
     color: var(--white);
@@ -282,5 +284,12 @@ body {
     padding: .5rem 0;
     font-size: 1.2rem;
     border: 1px solid var(--white);
+    background-color: var(--luminous-vivid-orange);
+  }
+}
+@media screen and (max-width: 414px) {
+  
+  .banner h2{
+    font-size: 6rem;
   }
 }
