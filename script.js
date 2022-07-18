@@ -21,7 +21,7 @@ const menuIcon = document.querySelector(".menu-icon");
 const menuText = document.querySelector(".menu-text");
 const nav_links = document.querySelector(".nav-links");
 const nav_buttom = document.querySelector(".nav-buttom");
-const allLinks = [...document.querySelectorAll(".nav-link"), ...document.querySelectorAll(".nav-buttom-links")];
+const allLinks = [...document.querySelectorAll(".nav-link"), ...document.querySelectorAll(".nav-buttom-link")];
 let toogleClick = 0;
 menu.addEventListener("click", () => {
     activeLinks();
@@ -33,3 +33,16 @@ allLinks.forEach((link) => {
         barCloser();
     })
 })
+// navigation background adder
+const navbar = document.querySelector(".navbar");
+const navButtomLink = document.querySelector(".nav-buttom-links")
+window.addEventListener("scroll", () => {
+ if(scrollY > 100){
+  console.log(scrollY);
+  navbar.classList.add("active");
+  navButtomLink.classList.add("active");
+ }else{
+  navbar.classList.remove("active");
+  navButtomLink.classList.remove("active");
+ }
+});

@@ -125,11 +125,19 @@ section{
  font-size: 3rem;
   margin-bottom: 5rem;
 }
+.large-btn-container{
+  justify-content: center !important;
+}
 .large-btn{
   margin: 5rem 0 ;
   background-color: var(--vivid-red);
+  color: var(--white);
+  padding: 1rem 10rem;
+  font-size: 2rem;
 }
-
+.large-btn:hover{
+  background-color: #a92828;
+}
 .flex {
   display: flex;
   justify-content: space-between;
@@ -159,11 +167,14 @@ section{
   left: 0;
   width: 100%;
   height: 4rem;
-  background-color: var(--vivid-red);
+  /* background-color: var(--vivid-red); */
   color: var(--white);
   overflow-y: hidden;
   transition: var(--transition);
   z-index: 1;
+}
+.navbar.active{
+   background-color: var(--vivid-red);
 }
 .logo {
   padding-left: 30px;
@@ -180,7 +191,6 @@ section{
 .nav-link {
   display: inline-block;
   padding: 1rem;
-  transition: var(--transition);
 }
 .navbar-right i {
   font-size: 1.75rem;
@@ -207,13 +217,18 @@ section{
   width: 100vw;
   height: 6rem;
   z-index: 9;
-  /* background-color: var(--white); */
+  
 }
 .nav-buttom-links {
   justify-content: center !important;
+  transition: var(--transition);
+}
+.nav-buttom-links.active{
+  background-color: var(--white);
+  box-shadow: 0 8px 18px -2px rgba(79, 77, 77, 0.766)
 }
 .nav-buttom-link {
-  color: var(--white);
+  color: var(--cyan-bluish-gray);
   margin: 1rem;
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
@@ -308,6 +323,10 @@ section{
   }
 }
 @media screen and (max-width: 414px) {
+  .large-btn{
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+  }
   .banner h2{
     font-size: 6rem;
   }
@@ -346,6 +365,10 @@ section{
 .news-grid-img{
 height: 50%;
 width: 100%;
+transition: var(--transition);
+}
+.news-grid-img:hover{
+  transform: scale(1.05);
 }
 .building-img-container{
  grid-column: 1 / span 2;
